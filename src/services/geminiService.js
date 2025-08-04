@@ -1,10 +1,9 @@
-// Chatbot API Key & Model
-const GEMINI_CHATBOT_KEY = 'AIzaSyA6AIhJ3ZRt1I2A14D5VewtJBL_Ui_O2pA';
-const GEMINI_CHATBOT_MODEL = 'gemini-1.5-flash-latest';
+// ===== Environment Variables (via Vite) =====
+const GEMINI_CHATBOT_KEY = import.meta.env.VITE_GEMINI_CHATBOT_KEY;
+const GEMINI_CHATBOT_MODEL = import.meta.env.VITE_GEMINI_CHATBOT_MODEL;
 
-//  Resume Analysis API Key & Model
-const GEMINI_RESUME_KEY = 'AIzaSyAzIZnAaIfbs0-6_ieYsSL3yyaMQX6_hIY';
-const GEMINI_RESUME_MODEL = 'gemini-1.5-flash-latest'; 
+const GEMINI_RESUME_KEY = import.meta.env.VITE_GEMINI_RESUME_KEY;
+const GEMINI_RESUME_MODEL = import.meta.env.VITE_GEMINI_RESUME_MODEL;
 
 // ===== CHATBOT API =====
 export async function callChatbotAPI(prompt) {
